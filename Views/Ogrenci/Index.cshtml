@@ -1,0 +1,35 @@
+﻿@{
+}
+
+@model List<Ogrenci>
+
+<div class="text-end">
+    <a href="/Ogrenci/Ekle" class="btn btn-primary">Ekle</a>
+</div>
+
+<div class="card mt-3">
+    <div class="card-header">
+        Öğrenci Listesi
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <tr>
+                <th>Adı Soyadı</th>
+                <th>No</th>
+                <th>Kayıt Tarihi</th>
+                <th>İşlemler</th>
+            </tr>
+            @foreach (var ogrenci in Model)
+            {
+                <tr>
+                    <td>@ogrenci.AdiSoyadi</td>
+                    <td>@ogrenci.OgrenciNo</td>
+                    <td>@ogrenci.KayitTarihi</td>
+                    <td>
+                        <a href="/Ogrenci/Detay/@ogrenci.Id">detay</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div> 
