@@ -8,11 +8,11 @@ Kurs - Bilgeadam
 Öğrenci listelemek
 
 
-Sınıf - crud
+Kurs - crud
 ----------------
-Sınıf oluştur / güncelle
-Sınıf listele
-Sınıf sil
+Kurs oluştur / güncelle
+Kurs listele
+Kurs sil
 
 
-Sınıfa öğrenci ata
+Kursa öğrenci ata - kursogrenci

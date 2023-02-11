@@ -1,0 +1,27 @@
+﻿@{
+}
+
+@model Ogrenci
+
+<h3>Öğrenci güncelle</h3>
+
+<form class="mt-3" action="/Ogrenci/Guncelle" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="mb-3">
+        <label class="form-label">Adı Soyadı</label>
+        <input type="text" class="form-control" asp-for="AdiSoyadi">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Öğrenci No</label>
+        <input type="text" class="form-control" asp-for="OgrenciNo">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Adresi</label>
+        <textarea rows="10" class="form-control" asp-for="Adres"></textarea>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Kayıt Tarihi</label>
+        <input type="date" class="form-control" asp-for="KayitTarihi">
+    </div>
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+</form>
