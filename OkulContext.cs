@@ -5,9 +5,14 @@ namespace MvcEf
 {
     public class OkulContext : DbContext
     {
+        public OkulContext(DbContextOptions<OkulContext> options)
+            : base(options)
+        {
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=ANK1-YZLMORT-08\SQLEXPRESS;Database=OkulYonetimDb;User Id=sa;Password=sa;");
+            //optionsBuilder.UseSqlServer(@"Server=ANK1-YZLMORT-08\SQLEXPRESS;Database=OkulYonetimDb;User Id=sa;Password=sa;");
             //optionsBuilder.UseSqlServer(@"Server=ANK1-YZLMORT-08\SQLEXPRESS;Database=OkulYonetimDb;Trusted_Connection=True;");
         }
 

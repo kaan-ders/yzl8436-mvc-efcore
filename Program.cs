@@ -1,7 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using MvcEf;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<OkulContext>(options =>
+  options.UseSqlServer(@"Server=ANK1-YZLMORT-08\SQLEXPRESS;Database=OkulYonetimDb;User Id=sa;Password=sa;"), 
+    ServiceLifetime.Scoped);
 
 var app = builder.Build();
 
